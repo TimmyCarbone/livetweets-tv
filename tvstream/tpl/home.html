@@ -1,0 +1,24 @@
+ <html>
+  <head>
+    <link rel='stylesheet' type='text/css' href='/static/tvstream.css'>
+    <script src='http://code.jquery.com/jquery-2.1.0.min.js'></script>
+  </head>
+  <body id='body'>
+    <h1 id='app-title'> TVLiveTweets v0.0.1 </h1>
+    <form id='search_bar'>
+      <input id='keyword'/>
+      <button type='submit' id='submit_button'>Stream it !</button>
+    </form>
+  </body>
+</html>
+
+<script>
+  $('#submit_button').click(function() {
+    var url  = "http://";
+        url += window.location.host;
+        url += "/stream/";
+        url += $('#keyword').val();
+    window.location = url;
+    return false;
+  });
+</script>

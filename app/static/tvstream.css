@@ -1,0 +1,133 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #659EC7;
+}
+
+h1#app-title {
+  color: white;
+  text-align: center;
+  margin-top: 10%
+}
+
+div#vertical_center {
+  position:absolute;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  overflow: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+div#tweet_container {
+  position:relative;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+form#search_bar {
+  width: 70%;
+  height: 5%;
+  margin: auto;
+  overflow: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  position: absolute;
+}
+
+form#search_bar #keyword {
+  float:left;
+  width: 70%;
+  height: 100%;
+  font-size: 120%;
+}
+
+form#search_bar #submit_button {
+  width: 30%;
+  height: 100%;
+}
+
+img#user_image {
+  width: 100%;
+  height: 50%;
+  border-radius: 10px;
+  margin: 2%;
+}
+
+div#left_bar {
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+div#left_bar img{
+  width: 100%;
+}
+
+div#header {
+  height: 15%;
+  margin-left: 32%;
+}
+
+div#header #username {
+  font-weight: bold;
+  font-size: 25px;
+  font-size: 4vw;
+  padding-top: 2%;
+}
+
+img#twitter_logo {
+  float:right;
+  width: 8%;
+  margin: 2%;
+}
+
+span#followers_count {
+  display: block;
+  font-weight: bold;
+  font-size: 30px;
+  font-size: 4vw;
+  text-align: center;
+}
+
+span#followers_label {
+  display: block;
+  font-weight: bold;
+  color: #00D0FF;
+  font-size: 30px;
+  font-size: 1.8vw;
+  text-align: center;
+}
+
+div#pseudo {
+  font-weight: bold;
+  color: #00D0FF;
+  font-size: 30px;
+  font-size: 3vw;
+  margin-right: 2%;
+}
+
+div#message {
+  height: 60%;
+  font-size: 30px;
+  font-family: 'Georgia';
+  font-size: 4vw;
+  margin-left: 32%;
+  padding-right: 2%;
+  margin-top: 5%;
+}
+
+span#created_at {
+  display:block ;
+  margin-top: 2%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  font-size: 2vw;
+}
+
+span.hashtag {
+  color: #00D0FF;
+}

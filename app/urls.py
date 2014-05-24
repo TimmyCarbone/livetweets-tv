@@ -9,4 +9,6 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', 'tvstream.views.home', name='home'),
+    url(r'^stream/(?P<keyword>[a-zA-Z0-9-]{0,50})$', 'tvstream.views.stream', name='stream'),
 )

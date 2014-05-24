@@ -1,0 +1,53 @@
+ <html>
+  <head>
+    <link rel='stylesheet' type='text/css' href='/static/tvstream.css'>
+    <script src='http://code.jquery.com/jquery-2.1.0.min.js'></script>
+  </head>
+  <body id='body'>
+    <div id='vertical_center'>
+      <div id='tweet_container'>
+        <div id='left_bar'>
+          <img id='user_image' src='{{ user_image }}'/> 
+          <span id='followers_count'>{{ tw.user.followers_count }}</span> 
+          <span id='followers_label'>FOLLOWERS</span>
+          <span id='created_at'> {{ tw.created_at }} </span>
+        </div>
+        <div id='header'>
+          <img id='twitter_logo' src='../../static/img/twitter_logo.png' />
+          <div id='username'> {{ tw.user.name }} </div>
+          <div id='pseudo'> @{{tw.user.screen_name}} </div>
+        </div>
+        <div id='message'>
+          {{ tw.text | safe}}
+        </div>
+        <span style="display:none" id='queue_id'> {{ queue_id }} </span>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  (function worker() {
+    var queue_id = $('#queue_id').html();
+
+    $.post('/stream/{{keyword}}', {
+        'csrfmiddlewaretoken':'{{csrf_token}}', 
+        'queue_id': queue_id}).done(function(data) {
+
+      var old_created_at = $('#created_at').html();
+      var old_username = $('#username').html();
+      var data = data.replace('<body', '<body><div id="body"').replace('</body>','</div></body>');
+      var body = $(data).filter('#body');
+      var created_at = $(data).find('#created_at').text();
+      var username = $(data).find('#username').text();
+
+      if(username != old_username || created_at != old_created_at) {
+        $('#body').fadeOut(function() {
+          $('#body').html(body);
+          $('#body').fadeIn();
+        });
+      }
+      setTimeout(worker, 5000);
+    });
+  })();
+</script>
