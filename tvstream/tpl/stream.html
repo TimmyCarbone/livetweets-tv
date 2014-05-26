@@ -7,7 +7,7 @@
     <div id='vertical_center'>
       <div id='tweet_container'>
         <div id='left_bar'>
-          <img id='user_image' src='{{ user_image }}'/> 
+          <div id='user_image' style='background-image:url({{ user_image }});'></div>
           <span id='followers_count'>{{ tw.user.followers_count }}</span> 
           <span id='followers_label'>FOLLOWERS</span>
           <span id='created_at'> {{ tw.created_at }} </span>

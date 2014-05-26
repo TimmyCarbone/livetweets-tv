@@ -49,11 +49,13 @@ form#search_bar #submit_button {
   height: 100%;
 }
 
-img#user_image {
-  width: 100%;
-  height: 50%;
-  border-radius: 10px;
+div#user_image {
   margin: 2%;
+  width: 98%;
+  height: 57%;
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-position: center;
 }
 
 div#left_bar {
