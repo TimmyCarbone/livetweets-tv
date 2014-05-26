@@ -1,6 +1,8 @@
-# TVLiveTweets
+# TVLiveTweets v0.0.1-dev
 
 A Twitter live streaming application
+
+Try the current version : [TVLiveTweets](http://tvlivetweets.herokuapp.com)
 
 ## Installation
 
