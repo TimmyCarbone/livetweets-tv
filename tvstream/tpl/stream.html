@@ -1,6 +1,6 @@
  <html>
   <head>
-    <link rel='stylesheet' type='text/css' href='/static/tvstream.css'>
+    <link rel='stylesheet' type='text/css' href='{{STATIC_URL}}tvstream.css'>
     <script src='http://code.jquery.com/jquery-2.1.0.min.js'></script>
   </head>
   <body id='body'>
@@ -13,7 +13,7 @@
           <span id='created_at'> {{ tw.created_at }} </span>
         </div>
         <div id='header'>
-          <img id='twitter_logo' src='../../static/img/twitter_logo.png' />
+          <img id='twitter_logo' src='{{STATIC_URL}}img/twitter_logo.png' />
           <div id='username'> {{ tw.user.name }} </div>
           <div id='pseudo'> @{{tw.user.screen_name}} </div>
         </div>
